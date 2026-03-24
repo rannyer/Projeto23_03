@@ -9,7 +9,8 @@ import androidx.navigation.compose.rememberNavController
 fun AppNavigation(
     onLogout: () -> Unit,
     onLoginSuccess: () -> Unit,
-    isLoggedIn: Boolean
+    isLoggedIn: Boolean,
+    isLoading: Boolean
 ) {
     val navController = rememberNavController()
     val starDestination = if (isLoggedIn) "main_graph" else "auth_graph"
